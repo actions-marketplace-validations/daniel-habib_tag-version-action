@@ -1,7 +1,6 @@
 name: tag-version-action
 description: change tag, commit, and push the change to gitops repo.
-# version: 1.0.7
-author: Fizgig.co
+author: Daniel Habib
 inputs:
   the_version:
     description: the version that should be in the tag
@@ -18,7 +17,7 @@ inputs:
   commit_message:
     description: Commit message
     required: true
-    default: Commit performed using Push and Commit action
+    default: Commit performed using tag-version-action
   target_branch:
     description: Branch to push the changes back to
     required: true
