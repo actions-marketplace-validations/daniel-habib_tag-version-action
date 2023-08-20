@@ -57,7 +57,7 @@ runs:
         git clone --single-branch --branch ${{ inputs.target_branch }} "https://${{ inputs.token }}@github.com/$DESTINATION_OWNER/$DESTINATION_REPOSITORY.git" "$CLONE_DIRECTORY"
 
         cd $CLONE_DIRECTORY
-        sed -r "s/^(\s*tag\s*:\s*).*/\1${{ inputs.the_version }}/" -i "${{ inputs.file }}"
+        sed -r "s/^(\s*tag\s*:\s*).*/\1\"${{ inputs.the_version }}\"/" -i "${{ inputs.file }}"
 
         git add ${{ inputs.file }}
 
